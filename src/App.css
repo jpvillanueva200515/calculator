@@ -4,8 +4,8 @@
 }
 
 .Calculator {
- width: 500px;
- margin:  auto;
+  width: 500px;
+  margin: auto;
 }
 
 .CalcDisplay {
@@ -15,19 +15,22 @@
   padding: 10px;
   text-align: right;
   background-color: #ccc;
+
 }
 
-.CalcButton {
+.CalcGrid {
   display: grid;
   gap: 2px;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .CalcButton {
   justify-content: center;
   border: 1px solid #0000ff;
   font-size: 2em;
   background-color: #7e83ce;
 }
+
 .ClearButton {
   justify-content: center;
   border: 1px solid #0000ff;

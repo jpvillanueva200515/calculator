@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 function CalcDisplay({ dispValue }) {
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <div className="Header">
-        Calculator of Arzy Klein Espiritu - DA3A
+        Calculator of Juan Paulo Villanueva - DA3A
       </div>
       <div className="Calculator">
         <CalcDisplay dispValue={disp} />
