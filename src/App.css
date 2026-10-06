@@ -1,0 +1,66 @@
+.App {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.Header {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+.Calculator {
+  width: 500px;
+  margin: auto;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+.CalcDisplay {
+  border: 1px solid black;
+  height: 50px;
+  font-size: 2em;
+  padding: 5px;
+  text-align: right;
+  background-color: gray;
+  color: white;
+  line-height: 50px;
+  margin-bottom: 5px;
+}
+
+.CalcButtons {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.CalcButton {
+  height: 70px;
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 2em;
+  background-color: rgb(71, 71, 71);
+  cursor: pointer;
+}
+
+.CalcButton:hover {
+  background-color: #a0a0a0;
+}
+
+.CalcButton:active {
+  transform: scale(0.98);
+}
+
+.ClearButton {
+  justify-content: center;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 2em;
+  background-color: rgb(255, 60, 0);
+  color: white;
+}
+
+.ClearButton:hover {
+  background-color: #ff6347;
+}
