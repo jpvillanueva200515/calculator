@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #000000;
   color: #ffffff;
@@ -9,69 +13,154 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .Header {
   font-size: 1.2rem;
   font-weight: bold;
-  color: hsl(0, 0%, 100%);
+  color: #ffffff;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .Calculator {
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   background-color: #121212;
   padding: 20px;
-  border-radius: 10px;
-  border: 2px solid hsl(32, 100%, 65%);
+  border-radius: 15px;
+  border: 2px solid #ffb45c;
+  box-shadow: 0 10px 30px rgba(255, 180, 92, 0.2);
 }
 
 .CalcDisplay {
   background-color: #000000;
-  color: hsl(32, 100%, 65%);
+  color: #ffb45c;
   font-size: 2rem;
   font-weight: bold;
   text-align: right;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 8px;
   margin-bottom: 15px;
   border: 1px solid #333333;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .CalcGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 8px;
 }
 
-.CalcButton {
-  padding: 15px;
+.CalcButton,
+.ClearButton,
+.SurnameButton {
+  width: 100%;
+  min-height: 60px;
+  padding: 12px;
   font-size: 1.2rem;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Number Buttons */
+.CalcButton {
   background-color: #262626;
   color: #ffffff;
+  box-shadow: 0 4px 0 #111111;
 }
 
 .CalcButton:hover {
   background-color: #3f3f3f;
-  color: hsl(32, 100%, 65%);
+  color: #ffb45c;
 }
 
+.CalcButton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #111111;
+}
+
+/* Operator Buttons: ÷, *, -, + */
+.CalcGrid .CalcButton:nth-child(4),
+.CalcGrid .CalcButton:nth-child(8),
+.CalcGrid .CalcButton:nth-child(12),
+.CalcGrid .CalcButton:nth-child(16) {
+  background-color: #ffb45c;
+  color: #000000;
+  box-shadow: 0 4px 0 #c47a25;
+}
+
+.CalcGrid .CalcButton:nth-child(4):hover,
+.CalcGrid .CalcButton:nth-child(8):hover,
+.CalcGrid .CalcButton:nth-child(12):hover,
+.CalcGrid .CalcButton:nth-child(16):hover {
+  background-color: #ffd08a;
+}
+
+.CalcGrid .CalcButton:nth-child(4):active,
+.CalcGrid .CalcButton:nth-child(8):active,
+.CalcGrid .CalcButton:nth-child(12):active,
+.CalcGrid .CalcButton:nth-child(16):active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #c47a25;
+}
+
+/* Equal Button */
+.CalcGrid .CalcButton:nth-child(15) {
+  background-color: #22c55e;
+  color: #ffffff;
+  box-shadow: 0 4px 0 #15803d;
+}
+
+.CalcGrid .CalcButton:nth-child(15):hover {
+  background-color: #4ade80;
+}
+
+.CalcGrid .CalcButton:nth-child(15):active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #15803d;
+}
+
+/* Clear Button */
 .ClearButton {
-  padding: 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   background-color: #d90429;
   color: #ffffff;
+  box-shadow: 0 4px 0 #8b0019;
 }
 
 .ClearButton:hover {
   background-color: #eb374c;
+}
+
+.ClearButton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #8b0019;
+}
+
+/* Surname Button */
+.SurnameButton {
+  grid-column: 1 / -1;
+  background-color: #ffb45c;
+  color: #000000;
+  box-shadow: 0 4px 0 #c47a25;
+}
+
+.SurnameButton:hover {
+  background-color: #ffd08a;
+}
+
+.SurnameButton:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #c47a25;
 }
