@@ -37,15 +37,15 @@ function App() {
           <CalcButton label={"4"} onClick={onClickHandler} />
           <CalcButton label={"5"} onClick={onClickHandler} />
           <CalcButton label={"6"} onClick={onClickHandler} />
-          <CalcButton label={"X"} onClick={onClickHandler} />
+          <CalcButton label={"*"} onClick={onClickHandler} />
           <CalcButton label={"1"} onClick={onClickHandler} />
           <CalcButton label={"2"} onClick={onClickHandler} />
           <CalcButton label={"3"} onClick={onClickHandler} />
           <CalcButton label={"-"} onClick={onClickHandler} />
-          <CalcButton label={"CLR"} buttonClassName="ClearButton" onClick={onClickHandler} />
+          <CalcButton label={"C"} buttonClassName="ClearButton" onClick={onClickHandler} />
           <CalcButton label={"0"} onClick={onClickHandler} />
-          <CalcButton label={"+"} onClick={onClickHandler} />
           <CalcButton label={"="} onClick={onClickHandler} />
+          <CalcButton label={"+"} onClick={onClickHandler} />
         </div>
       </div>
     </div>
